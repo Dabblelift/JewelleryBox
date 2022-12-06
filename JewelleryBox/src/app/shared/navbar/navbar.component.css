@@ -1,3 +1,8 @@
+.navbar{
+    position: sticky;
+    top: 0px;
+}
+
 .navbar-collapse{
     justify-content: center;
 }
