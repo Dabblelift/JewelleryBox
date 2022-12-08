@@ -1,1 +1,28 @@
-<p>jewels works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ul class="product-list">
+    <li class="list-item" *ngFor="let jewel of jewels">
+            <div id="container">
+                <div class="product-details">
+                    <h1>{{jewel.title}}</h1>
+
+                    <div class="control">
+                        <button class="btn">
+                            <span class="price">€{{jewel.price}}</span>
+                            <span class="shopping-cart">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </span>
+                            <span class="buy">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-image">
+                    <img src="{{jewel.imageUrl}}" alt="{{jewel.title}}">
+                    <div class="info">
+                        <p class="description">{{jewel.description}}</p>
+                    </div>
+                </div>
+            </div>
+    </li>
+</ul>

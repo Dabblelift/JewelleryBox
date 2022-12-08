@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { JewelsService } from 'src/app/services/jewels.service';
+import { Jewel } from 'src/app/shared/models/jewel';
 
 @Component({
   selector: 'app-jewels',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class JewelsComponent {
 
+  jewels: Jewel[] = [];
+
+  constructor(private jewelsService: JewelsService) {
+    this.jewels = jewelsService.GetAll();
+  }
 }
