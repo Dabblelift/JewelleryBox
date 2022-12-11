@@ -1,0 +1,86 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
+
+.banner{
+    display: flex;
+    height: 600px;
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner .title-container{
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.banner .title{
+    font-weight: 600;
+    font-family: 'Kalam', cursive;
+    color: #fff;
+    display: inline-block;
+    width: 70%;
+}
+
+.banner .btn-primary{
+    color: #fff;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    padding: 15px;
+    width: 140px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s linear;
+}
+
+.banner .btn-primary:hover{
+    transform: translateY(-10px);
+    background-color: var(--secondary-color);
+}
+
+
+.advantages{
+    background-color: #f1f1f1;
+}
+
+.advantages-header{
+    padding: 40px;
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    color: var(--secondary-color);
+}
+
+.advantages-list{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+}
+
+.advantages-item{
+    background-color: var(--black-color);
+    width: 25%;
+    border-radius: 8px;
+}
+
+.advantages-item i{
+    color: var(--primary-color);
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+.advantages-item p{
+    color: #fff;
+    font-family: 'Kalam', cursive;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px;
+}
