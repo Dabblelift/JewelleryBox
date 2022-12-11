@@ -4,7 +4,7 @@ export const sample_jewels: Jewel[] = [
     {
         "title": "Bridal Butterfly Crystal Gold Upper Arm Bracelet",
         "id": "1",
-        "description": "Size (diameter) : 3.5\" One Size Fits Most (Stretchable)\nButterfly Szie: 1.75\" X 1\" (4.5 cm X 2.5 cm)\nGrab everyone's attention\nPerfect item for your wedding parties, special events, etc.\nMaterial : High Quality Clear Austrian Crystal Rhinestone, Gold Plated Metal\nCan be worn as a bridal and prom accessory\nWonderful gift for a loved one (or yourself!)",
+        "description": "Size (diameter) : 3.5\" One Size Fits Most (Stretchable)\nButterfly Size: 1.75\" X 1\" (4.5 cm X 2.5 cm)\nGrab everyone's attention\nPerfect item for your wedding parties, special events, etc.\nMaterial : High Quality Clear Austrian Crystal Rhinestone, Gold Plated Metal\nCan be worn as a bridal and prom accessory\nWonderful gift for a loved one (or yourself!)",
         "price": 17.99,
         "imageUrl": "https://cdn.shopify.com/s/files/1/2481/1410/products/butterfly_gold_01.jpg",
         "tags": [
