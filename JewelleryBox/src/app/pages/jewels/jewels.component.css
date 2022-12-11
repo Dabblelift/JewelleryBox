@@ -55,7 +55,7 @@ body {
 
     transform: translateY(20px);
     transition: 0.3s linear;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -69,7 +69,7 @@ body {
 
 .btn:hover {
     transform: translateY(-6px);
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 .btn span {
