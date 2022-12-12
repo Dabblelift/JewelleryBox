@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { sample_jewels } from 'src/data';
-import { Jewel } from '../shared/models/jewel';
+import { Jewel } from '../shared/models/Jewel';
 
 @Injectable({
   providedIn: 'root'

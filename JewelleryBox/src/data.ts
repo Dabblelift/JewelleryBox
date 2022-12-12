@@ -1,4 +1,4 @@
-import { Jewel } from "./app/shared/models/jewel";
+import { Jewel } from "./app/shared/models/Jewel";
 
 export const sample_jewels: Jewel[] = [
     {

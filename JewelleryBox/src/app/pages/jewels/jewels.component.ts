@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { JewelsService } from 'src/app/services/jewels.service';
-import { Jewel } from 'src/app/shared/models/jewel';
+import { Jewel } from 'src/app/shared/models/Jewel';
 
 @Component({
   selector: 'app-jewels',
