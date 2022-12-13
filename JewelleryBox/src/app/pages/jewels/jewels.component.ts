@@ -12,6 +12,8 @@ export class JewelsComponent {
   jewels: Jewel[] = [];
 
   constructor(private jewelsService: JewelsService) {
-    this.jewels = jewelsService.GetAll();
+    this.jewelsService.GetAll().subscribe((res) => {
+      this.jewels = res;
+    });
   }
 }
