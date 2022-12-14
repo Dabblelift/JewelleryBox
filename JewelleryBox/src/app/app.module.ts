@@ -8,6 +8,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages//home/home.component';
 import { JewelsComponent } from './pages/jewels/jewels.component';
 import { AboutComponent } from './pages/about/about.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,11 +21,19 @@ import { AboutComponent } from './pages/about/about.component';
     HomeComponent,
     JewelsComponent,
     AboutComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut:3000,
+      positionClass:'toast-bottom-right',
+      newestOnTop:false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,8 +4,9 @@
     z-index: 1;
 }
 
-.navbar-collapse{
-    justify-content: center;
+.navbar-main,
+.navbar-profile{
+    justify-content: right;
 }
 
 .navbar-light .navbar-nav .nav-link.active-link{
@@ -27,4 +28,33 @@
 .navbar-light .navbar-brand{
     color: var(--primary-color);
     margin-left: 1rem;
+}
+
+.navbar-profile{
+    margin-right: 1rem;
+}
+
+.profile-container{
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    z-index: 1;
+    background-color: whitesmoke;
+    display: none;
+}
+
+.profile-container:hover .menu{
+    display: block;
+}
+
+.menu a{
+    width: 80%;
+    min-width: 8rem;
+    margin: 10px;
+}
+
+.menu a:last-child{
+    cursor: pointer;
 }

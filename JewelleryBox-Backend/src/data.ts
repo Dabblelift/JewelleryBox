@@ -117,3 +117,27 @@ export const sample_jewels: any[] = [
         ]
     }
 ]
+
+export const sample_users: any[] = [
+    {
+        firstName: "Erik",
+        lastName: "Hayrelov",
+        email: "erik_man.united@abv.bg",
+        password: "erik123",
+        isAdmin: true,
+    },
+    {
+        firstName: "Ivan",
+        lastName: "Georgiev",
+        email: "vankata95@abv.bg",
+        password: "123456",
+        isAdmin: false,
+    },
+    {
+        firstName: "Nicole",
+        lastName: "Stoyanova",
+        email: "Queen_NS@abv.bg",
+        password: "nicole08",
+        isAdmin: false,
+    }
+]

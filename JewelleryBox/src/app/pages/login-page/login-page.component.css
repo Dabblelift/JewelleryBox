@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.details{
+    width: 25rem;
+}
+
+.title{
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+    
+.input-container input{
+    width: 80%;
+}
+
+.error-list{
+    color: red;
+}
+
+.button button{
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.button button:hover{
+    background-color: var(--secondary-color);
+}
