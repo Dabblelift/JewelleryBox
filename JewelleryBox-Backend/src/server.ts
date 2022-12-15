@@ -15,6 +15,12 @@ app.get("/api/jewels", (req, res) =>{
     res.send(sample_jewels);
 })
 
+app.get("/api/jewels/:jewelId", (req, res) => {
+    const jewelId = req.params.jewelId;
+    const jewel = sample_jewels.find(jewel => jewel.id == jewelId);
+    res.send(jewel);
+  })
+
 app.post("/api/users/login", (req,res) => {
     const {email, password} = req.body;
     const user = sample_users.find(user => user.email === email && user.password === password);

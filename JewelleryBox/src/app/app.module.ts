@@ -12,6 +12,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JewelsComponent,
     AboutComponent,
     LoginPageComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,

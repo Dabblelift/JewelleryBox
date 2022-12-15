@@ -1,0 +1,39 @@
+<h1 class="title">Cart Page</h1>
+
+<div class="container">
+    <ul>
+        <div *ngIf="cart.items.length === 0">
+            <li>
+                <div>
+                    <p>You have no items in your cart. You can add products <a routerLink="../jewels">here</a></p>
+                </div>
+            </li>
+        </div>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img src="{{cartItem.jewel.imageUrl}}" alt="{{cartItem.jewel.title}}">
+            </div>
+            <div>{{cartItem.jewel.title}}</div>
+            <div>
+                <input type="number" #quantitySelect value="{{cartItem.quantity}}"
+                    (change)="changeQuantity(cartItem, quantitySelect.value)" min="1" max="20">
+            </div>
+            <div>
+                €{{roundPrice(cartItem.price)}}
+            </div>
+
+            <div>
+                <button class="remove-button" (click)="removeFromCart(cartItem)"><i
+                        class="bi bi-x-circle-fill"></i></button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="checkout">
+        <div>
+            <div class="items-count">{{cart.totalCount}}</div>
+            <div class="total-price">€{{roundPrice(cart.totalPrice)}}</div>
+        </div>
+        <a routerLink="/checkout">Purchase</a>
+    </div>
+</div>

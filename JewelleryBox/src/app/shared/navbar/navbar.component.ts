@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { UserService } from 'src/app/services/user.service';
 import { User } from '../models/User';
 
@@ -10,12 +11,15 @@ import { User } from '../models/User';
 export class NavbarComponent {
 
   user!:User;
-
-  constructor(private userService:UserService){
+  cartQuantity = 0;
+  constructor(private userService:UserService, cartService:CartService){
     userService.userObservable.subscribe((newUser) => {
       this.user = newUser;
     })
 
+    cartService.getCartObservable().subscribe((newCart) => {
+      this.cartQuantity = newCart.totalCount;
+    })
   }
 
   logout(){
