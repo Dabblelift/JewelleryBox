@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 2rem;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 45%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.final-desc{
+    font-weight: 600;
+    font-size: 28px;
+}
+
+img{
+    width: 45%;
+    height: 45%;
+}
