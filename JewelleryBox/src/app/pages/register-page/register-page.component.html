@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="details">
+        <h1 class="title">Register</h1>
+
+        <form [formGroup]="registerForm" (ngSubmit)="submit()">
+            <div class="input-container">
+                <label>First Name</label>
+                <div>
+                    <input type="text" formControlName="firstName">
+                </div>
+
+                <div class="error-list" *ngIf="fc['firstName'].errors && isSubmitted">
+                    <div *ngIf="fc['firstName'].errors['required']">First Name is required.</div>
+                    <div *ngIf="fc['firstName'].errors['minlength']">First Name should have a minimum length of 2.</div>
+                </div>
+            </div>
+            <div class="input-container">
+                <label>Last Name</label>
+                <div>
+                    <input type="text" formControlName="lastName">
+                </div>
+
+                <div class="error-list" *ngIf="fc['lastName'].errors && isSubmitted">
+                    <div *ngIf="fc['lastName'].errors['required']">Last Name is required.</div>
+                    <div *ngIf="fc['lastName'].errors['minlength']">Last Name should have a minimum length of 2.</div>
+                </div>
+            </div>
+            <div class="input-container">
+                <label>Email</label>
+                <div>
+                    <input type="email" formControlName="email">
+                </div>
+
+                <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                    <div *ngIf="fc['email'].errors['required']">Email is required.</div>
+                    <div *ngIf="fc['email'].errors['email']">Email should be valid.</div>
+                </div>
+            </div>
+            <div class="input-container">
+                <label>Password</label>
+                <div>
+                    <input type="password" formControlName="password">
+                </div>
+                <div class="error-list" *ngIf="fc['password'].errors && isSubmitted">
+                    <div *ngIf="fc['password'].errors['required']">Password is required.</div>
+                    <div *ngIf="fc['password'].errors['minlength']">Password should have at least 6 symbols.</div>
+                </div>
+            </div>
+            <div class="input-container">
+                <label>Confirm Password</label>
+                <div>
+                    <input type="password" formControlName="confirmPassword">
+                </div>
+                <div class="error-list" *ngIf="fc['confirmPassword'].errors && isSubmitted">
+                    <div *ngIf="fc['confirmPassword'].errors['required']">Confirm Password is required.</div>
+                    <div *ngIf="fc['confirmPassword'].errors['notMatch']">Passwords are not matching.</div>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+
+        <div class="login">
+            <p>Already have an account? Login <a routerLink="../login">here</a></p>
+        </div>
+    </div>
+</div>

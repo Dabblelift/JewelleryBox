@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
     AboutComponent,
     LoginPageComponent,
     CartPageComponent,
+    RegisterPageComponent,
   ],
   imports: [
     BrowserModule,

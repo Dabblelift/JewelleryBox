@@ -23,7 +23,7 @@ form{
     justify-content: center;
     gap: 15px;
 }
-   
+
 .input-container label{
     padding-left: 5px;
 }
@@ -32,7 +32,8 @@ form{
     width: 80%;
     border-radius: 10px;
     padding: 1px 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 .error-list{
     color: red;
@@ -50,7 +51,7 @@ form{
     background-color: var(--secondary-color);
 }
 
-.register{
+.login{
     margin-top: 40px;
     margin-bottom: 150px;
 }
