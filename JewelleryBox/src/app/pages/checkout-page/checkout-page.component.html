@@ -25,8 +25,22 @@
                     <div *ngIf="fc['address'].errors['minlength']">Address is too short.</div>
                 </div>
             </div>
+            <div class="input-container">
+                <label>Phone Number</label>
+                <div>
+                    <input type="text" formControlName="phoneNumber">
+                </div>
+
+                <div class="error-list" *ngIf="fc['phoneNumber'].errors">
+                    <div *ngIf="fc['phoneNumber'].errors['required']">Phone number is required.</div>
+                    <div *ngIf="fc['phoneNumber'].errors['pattern']">Phone number should only contain numbers.</div>
+                </div>
+            </div>
         </form>
 
+        <div class="warning">
+            Please, make sure to enter your exact address and phone number as we will need them to complete the delivery!
+        </div>
         <order-items-list [order]="order"></order-items-list>
     </div>
     

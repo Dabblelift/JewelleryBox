@@ -24,7 +24,8 @@ export class CheckoutPageComponent implements OnInit {
     let name = this.userService.currentUser.firstName + ' ' + this.userService.currentUser.lastName;
     this.checkoutForm = this.formBuilder.group({
       name: [name, Validators.required],
-      address: ['', [Validators.required, Validators.minLength(12)]]
+      address: ['', [Validators.required, Validators.minLength(12)]],
+      phoneNumber: ['', [Validators.required, Validators.pattern('[0-9]{5,}')]  ],
     });
   }
 
@@ -40,6 +41,7 @@ export class CheckoutPageComponent implements OnInit {
 
     this.order.name = this.fc['name'].value;
     this.order.address = this.fc['address'].value;
+    this.order.phoneNumber = this.fc['phoneNumber'].value;
 
     console.log(this.order)
   }
