@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
+}
+
+
+.title{
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.details{
+    display: flex;
+    justify-content: spa;
+}
+
+.details > div{
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+
+.details strong{
+    display: inline-block;
+    width: 40%;
+}
+
+.order-info{
+    width: 80%;
+}
+
+@media screen and (max-width:995px) {
+    .details > div{
+        margin: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .details{
+        flex-direction: column;
+    }
+}

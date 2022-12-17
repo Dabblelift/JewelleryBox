@@ -6,7 +6,7 @@ import { OrderModel } from "../models/order.module";
 import auth from '../middlewares/auth.mid';
 
 const router = Router();
-router.use(auth)
+// router.use(auth)
 
 router.post('/create',
     asyncHandler(async (req: any, res: any) => {
@@ -25,6 +25,14 @@ router.post('/create',
         const newOrder = new OrderModel({ ...requestOrder, user: req.user.id });
         await newOrder.save();
         res.send(newOrder);
-    }))
+    })
+)
+
+router.get("/:orderId", asyncHandler(
+    async (req, res) => {
+        const order = await OrderModel.findById(req.params.orderId);
+        res.send(order);
+    }
+))
 
 export default router;
