@@ -1,19 +1,23 @@
 <div class="container">
     <h1 class="title">Order Page</h1>
-    <h2>Order ID: {{order.id}}</h2>
+    <h2 *ngIf="order">Order ID: {{order.id}}</h2>
 
-    <div class="details">
-        <div class="order-info">
-            <p><strong>Ordered by: </strong>{{order.name}}</p>
-            <p><strong>Address: </strong>{{order.address}}</p>
-            <p><strong>Phone Number: </strong>{{order.phoneNumber}}</p>
-            <p><strong>Order Status: </strong>{{order.status}}</p>
-            <p><strong>Ordered by: </strong>{{order.name}}</p>
-        </div>
-        <div class="order-items">
-            <div class="items">
-                <order-items-list [order]="order"></order-items-list>
+    <div class="content" *ngIf="order">
+
+        <div class="details">
+            <div class="order-info">
+                <p><strong>Ordered by: </strong>{{order.name}}</p>
+                <p><strong>Address: </strong>{{order.address}}</p>
+                <p><strong>Phone Number: </strong>{{order.phoneNumber}}</p>
+                <p><strong>Order Status: </strong>{{order.status}}</p>
+                <p><strong>Ordered by: </strong>{{order.name}}</p>
+            </div>
+            <div class="order-items">
+                <div class="items">
+                    <order-items-list [order]="order"></order-items-list>
+                </div>
             </div>
         </div>
     </div>
+
 </div>

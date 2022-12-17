@@ -15,7 +15,7 @@ import { Order } from 'src/app/shared/models/Order';
 export class CheckoutPageComponent implements OnInit {
   order: Order = new Order();
   checkoutForm!: FormGroup;
-  constructor(cartService: CartService, private formBuilder: FormBuilder,
+  constructor(private cartService: CartService, private formBuilder: FormBuilder,
     private userService: UserService, private toastrService: ToastrService,
     private orderService: OrderService, private router: Router) {
     const cart = cartService.getCart();
@@ -49,6 +49,11 @@ export class CheckoutPageComponent implements OnInit {
     this.orderService.create(this.order).subscribe({
       next:() => {
         this.router.navigateByUrl('/');
+        this.toastrService.success(
+          `Congratulations, ${this.userService.currentUser.firstName}`,
+          'You have successfully made a new order.'
+        )
+        this.cartService.clearCart();
       },
       error:(errorResponse) => {
         this.toastrService.error(errorResponse.error, 'Cart');

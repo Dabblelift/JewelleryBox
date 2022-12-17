@@ -6,7 +6,7 @@ import { OrderModel } from "../models/order.module";
 import auth from '../middlewares/auth.mid';
 
 const router = Router();
-// router.use(auth)
+router.use(auth)
 
 router.post('/create',
     asyncHandler(async (req: any, res: any) => {
@@ -16,11 +16,6 @@ router.post('/create',
             res.status(HTTP_BAD_REQUEST).send('Cart Is Empty');
             return;
         }
-
-        await OrderModel.deleteOne({
-            user: req.user.id,
-            status: OrderStatus.WAITING
-        });
 
         const newOrder = new OrderModel({ ...requestOrder, user: req.user.id });
         await newOrder.save();
