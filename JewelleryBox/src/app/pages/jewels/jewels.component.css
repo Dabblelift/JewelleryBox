@@ -6,7 +6,7 @@ body {
 
 }
 
-.product-list{
+.product-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +18,7 @@ body {
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
-    margin:  10px;
+    margin: 10px;
     height: 350px;
     width: 700px;
 }
@@ -150,7 +150,7 @@ body {
     white-space: pre-wrap;
 }
 
-.description{
+.description {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -169,6 +169,26 @@ body {
     transform: scale(1.2, 1.2);
 }
 
-li:last-child{
+li:last-child {
     margin-bottom: 70px;
+}
+
+@media screen and (min-width:1250px) and (max-width:1475px) {
+    #container {
+        width: 580px;
+    }
+
+    #container h1 {
+        width: 120%;
+    }
+}
+
+@media screen and (min-width:1850px) {
+    #container {
+        width: 580px;
+    }
+
+    #container h1 {
+        width: 120%;
+    }
 }

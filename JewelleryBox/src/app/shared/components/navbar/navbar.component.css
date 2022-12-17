@@ -4,9 +4,8 @@
     z-index: 1;
 }
 
-.navbar-main,
-.navbar-profile{
-    justify-content: right;
+.navbar-collapse{
+    justify-content: space-between;
 }
 
 .navbar-light .navbar-nav .nav-link.active-link{
@@ -28,6 +27,7 @@
 .navbar-light .navbar-brand{
     color: var(--primary-color);
     margin-left: 1rem;
+    margin-right: 2rem;
 }
 
 .navbar-profile{
@@ -70,4 +70,16 @@ a span{
 
 .menu a:last-child{
     cursor: pointer;
+}
+
+@media screen and (max-width:995px) {
+
+    .navbar-light .navbar-nav .nav-link{
+        text-align: center;
+    }
+
+    .menu a{
+        width: 100vw;
+    }
+
 }
