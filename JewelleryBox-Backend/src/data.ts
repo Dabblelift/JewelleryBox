@@ -123,21 +123,21 @@ export const sample_users: any[] = [
         firstName: "Erik",
         lastName: "Hayrelov",
         email: "erik_man.united@abv.bg",
-        password: "erik123",
+        password: "$2a$10$2E6zB.C5xdFtIYmQQZFwG.Iq6UUk8IqNzdEvZml/HZW1b/wwE03ku",
         isAdmin: true,
     },
     {
         firstName: "Ivan",
         lastName: "Georgiev",
         email: "vankata95@abv.bg",
-        password: "123456",
+        password: "$2a$10$2E6zB.C5xdFtIYmQQZFwG.Iq6UUk8IqNzdEvZml/HZW1b/wwE03ku",
         isAdmin: false,
     },
     {
         firstName: "Nicole",
         lastName: "Stoyanova",
         email: "Queen_NS@abv.bg",
-        password: "nicole08",
+        password: "$2a$10$2E6zB.C5xdFtIYmQQZFwG.Iq6UUk8IqNzdEvZml/HZW1b/wwE03ku",
         isAdmin: false,
     }
 ]
