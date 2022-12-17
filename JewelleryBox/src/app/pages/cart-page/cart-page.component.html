@@ -34,6 +34,6 @@
             <div class="items-count">{{cart.totalCount}}</div>
             <div class="total-price">€{{roundPrice(cart.totalPrice)}}</div>
         </div>
-        <a routerLink="/checkout">Purchase</a>
+        <a [ngClass]="{'isDisabled':cart.items.length == 0}" routerLink="/checkout">Purchase</a>
     </div>
 </div>

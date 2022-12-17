@@ -121,3 +121,7 @@ li .remove-button:hover{
 .checkout a:hover{
     opacity: 1;
 }
+
+.checkout .isDisabled{
+    display: none;
+}
