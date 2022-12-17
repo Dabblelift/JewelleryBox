@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { OrderService } from 'src/app/services/order.service';
 import { Order } from 'src/app/shared/models/Order';
+import { roundPrice } from 'src/app/shared/functions/priceRounder';
 
 @Component({
   selector: 'app-orders',
@@ -12,6 +13,7 @@ import { Order } from 'src/app/shared/models/Order';
 export class OrdersComponent {
   
   orders: Order[] = [];
+  roundPrice = roundPrice;
   constructor(private orderService: OrderService, activatedRoute: ActivatedRoute) { 
     let ordersObservable: Observable<Order[]>
 
