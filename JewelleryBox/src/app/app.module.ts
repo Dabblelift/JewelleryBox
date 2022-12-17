@@ -18,6 +18,7 @@ import { LoadingComponent } from './shared/components/loading/loading.component'
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './shared/components/order-items-list/order-items-list.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { OrderItemsListComponent } from './shared/components/order-items-list/or
     })
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor, multi: true}
+    {provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor, multi: true},
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
