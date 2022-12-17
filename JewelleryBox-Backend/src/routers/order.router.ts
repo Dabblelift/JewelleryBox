@@ -30,4 +30,14 @@ router.get("/:orderId", asyncHandler(
     }
 ))
 
+router.get("/byuser/:userId", asyncHandler(
+    async (req: any, res) => {
+        const orders = await (await OrderModel.find({ user: req.params.userId }))
+        .sort((a, b) => (a.createdAt > b.createdAt ? -1 : 1));
+        res.send(orders);
+    }
+))
+
+
+
 export default router;

@@ -48,7 +48,7 @@ export class CheckoutPageComponent implements OnInit {
 
     this.orderService.create(this.order).subscribe({
       next:() => {
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/orders/' + this.userService.currentUser.id);
         this.toastrService.success(
           `Congratulations, ${this.userService.currentUser.firstName}`,
           'You have successfully made a new order.'

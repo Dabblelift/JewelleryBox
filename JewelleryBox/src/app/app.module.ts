@@ -20,6 +20,7 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
 import { OrderItemsListComponent } from './shared/components/order-items-list/order-items-list.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { OrderPageComponent } from './pages/order-page/order-page.component';
     CheckoutPageComponent,
     OrderItemsListComponent,
     OrderPageComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,

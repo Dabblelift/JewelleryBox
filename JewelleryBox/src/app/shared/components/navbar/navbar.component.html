@@ -29,11 +29,10 @@
           <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
         </li>
         <li class="nav-item profile-container" *ngIf="isAuth">
-          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active-link">Hello, {{user.firstName}}
+          <a class="nav-link dropdown">Hello, {{user.firstName}}
             {{user.lastName}}</a>
           <div class="menu">
-            <a class="nav-link" routerLink="/profile">Profile</a>
-            <a class="nav-link" routerLink="/orders">Orders</a>
+            <a class="nav-link" routerLink="/orders/{{user.id}}">Orders</a>
             <a class="nav-link" (click)="logout()">Logout</a>
           </div>
         </li>
