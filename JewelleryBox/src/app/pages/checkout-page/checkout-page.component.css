@@ -1,0 +1,50 @@
+.checkout-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
+}
+
+
+.title{
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.input-container label{
+    padding-left: 5px;
+}
+
+.input-container input{
+    width: 70%;
+    border-radius: 10px;
+    padding: 1px 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.error-list{
+    color: red;
+}
+
+.button button{
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.button button:hover{
+    background-color: var(--secondary-color);
+}

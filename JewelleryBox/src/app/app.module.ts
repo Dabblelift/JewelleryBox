@@ -16,6 +16,8 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoadingComponent } from './shared/components/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
+import { OrderItemsListComponent } from './shared/components/order-items-list/order-items-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     CartPageComponent,
     RegisterPageComponent,
     LoadingComponent,
+    CheckoutPageComponent,
+    OrderItemsListComponent,
   ],
   imports: [
     BrowserModule,

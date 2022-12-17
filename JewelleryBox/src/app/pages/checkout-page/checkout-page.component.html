@@ -1,0 +1,36 @@
+<div class="checkout-container">
+    <div class="content">
+        <h1 class="title">Checkout</h1>
+
+        <form [formGroup]="checkoutForm">
+            <div class="input-container">
+                <label>Name</label>
+                <div>
+                    <input type="text" formControlName="name">
+                </div>
+
+                <div class="error-list" *ngIf="fc['name'].errors">
+                    <div *ngIf="fc['name'].errors['required']">Name is required.</div>
+                    <div *ngIf="fc['name'].errors['minlength']">Name should have a minimum length of 5.</div>
+                </div>
+            </div>
+            <div class="input-container">
+                <label>Address</label>
+                <div>
+                    <input type="text" formControlName="address">
+                </div>
+
+                <div class="error-list" *ngIf="fc['address'].errors">
+                    <div *ngIf="fc['address'].errors['required']">Address is required.</div>
+                    <div *ngIf="fc['address'].errors['minlength']">Address is too short.</div>
+                </div>
+            </div>
+        </form>
+
+        <order-items-list [order]="order"></order-items-list>
+    </div>
+    
+    <div class="button">
+        <button (click)="createOrder()">Create order</button>
+    </div>
+</div>
