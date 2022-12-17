@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Cart } from 'src/app/shared/models/Cart';
 import { CartItem } from 'src/app/shared/models/CartItem';
+import { roundPrice } from '../../shared/functions/priceRounder'
 
 @Component({
   selector: 'app-cart-page',
@@ -10,6 +11,7 @@ import { CartItem } from 'src/app/shared/models/CartItem';
 })
 export class CartPageComponent {
   cart!: Cart;
+  roundPrice = roundPrice;
 
   constructor(private cartService:CartService) { 
     this.cartService.getCartObservable().subscribe((cart) => {
@@ -26,7 +28,4 @@ export class CartPageComponent {
     this.cartService.changeQuantity(cartItem.jewel.id, quantity);
   }
 
-  roundPrice(price:number){
-    return parseFloat(price.toString()).toFixed(2)
-  }
 }

@@ -18,7 +18,7 @@
             {{item.quantity}}
         </td>
         <td>
-            €{{item.price}}
+            €{{roundPrice(item.price)}}
         </td>
     </tr>
     <tr>
@@ -30,7 +30,7 @@
         </td>
         <td>
             <strong>
-                €{{order.totalPrice}}
+                €{{roundPrice(order.totalPrice)}}
             </strong>
         </td>
     </tr>

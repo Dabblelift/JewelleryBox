@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Order } from '../../models/Order';
+import { roundPrice } from '../../../shared/functions/priceRounder'
 
 @Component({
   selector: 'order-items-list',
@@ -10,4 +11,5 @@ export class OrderItemsListComponent {
 
   @Input()
   order!: Order;
+  roundPrice = roundPrice;
 }
