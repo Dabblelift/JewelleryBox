@@ -8,7 +8,6 @@
     gap: 10px;
 }
 
-
 .title{
     font-family: 'Kalam', cursive;
     text-align: center;
@@ -31,7 +30,9 @@
 }
 
 .order-info{
+    border: 1px solid #eeeeee;
     width: 80%;
+    padding: 10px;
 }
 
 @media screen and (max-width:995px) {
