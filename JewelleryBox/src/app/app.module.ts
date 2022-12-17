@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
@@ -14,6 +14,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoadingComponent } from './shared/components/loading/loading.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     LoginPageComponent,
     CartPageComponent,
     RegisterPageComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
       newestOnTop:false
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:LoadingInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
